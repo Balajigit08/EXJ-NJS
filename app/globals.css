@@ -1,26 +1,137 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@theme {
+  /* <colors> */
+
+  --color-b-color: #E7E7E7;
+  --color-a-color: #FFFFFF;
+  --color-hr-color: #ffffff54;
+  --color-bg1: #D95C5C;
+  --color-bg2: #D9815C;
+  --color-bg3: #D9A75C;
+  --color-bg4: #B0A229;
+  --color-bg5: #98AC3F;
+  --color-bg6: #41AC6F;
+  --color-bg7: #76D95C;
+  --color-bg8: #5CD98E;
+  --color-bg9: #5CD9D9;
+  --color-bg10: #755CD9;
+  --color-bg11: #9B5CD9;
+  --color-bg12: #C05CD9;
+  --color-bg13: #D95CA8;
+  --color-bg14: #D95C5D;
+  --color-bg15: #D9A75C;
+  --color-bg16: #91389F;
+  --color-tx: #000000;
+  --color-pc: #3261B2;
+  --color-tx1: #686868;
+  --color-ipara: #303030;
+  --color-anchorc: #D35F2A;
+  --color-dotc: #9A9A9A;
+  --color-desbg: #E8F7FE;
+  --color-japc: #FDFDFD;
+  --color-circl1: #DDC084;
+  --color-circl2: #F7A5AE;
+  --color-circl3: #E8D0D9;
+  --color-circl4: #A081A0;
+  --color-circl5: #BA7164;
+  --color-conbg: #F3F3F3;
+  --color-slidebg: #FFFAEC;
+  --color-btncolor: #7C0000;
+  --color-txtbc: #D1D1D1;
+  --color-footc: #0B1444;
+
+
+  /* <text-size> */
+
+  --text-header-size: 90px;
+  --text-gatetext: 32px;
+  --text-gatetext1: 71.74px;
+  --text-ptx: 20px;
+  --text-anchor: 16px;
+  --text-imgp: 24px;
+  --text-japs: 363.93px;
+  --text-footxt: 64px;
+  --text-vtxt: 40px;
+
+  /* <font-family> */
+
+  --font-inter: var(--font-inter);
+  --font-protest: var(--font-protest);
+  --font-melody: var(--font-melody);
+  
+
+  /* <width> */
+
+  --spacing-half-w: 80%;
+  --spacing-half-w1: 90%;
+  --spacing-half-w2: 70%;
+  --spacing-sw1: 148px;
+  --spacing-sw1: 119px;
+  --spacing-vw: 616px;
+  --spacing-iw: 332px;
+  --spacing-mw: 442px;
+  --spacing-cw: 63px;
+  --spacing-imw: 555px;
+  --spacing-slidew: 600px;
+  --spacing-tw: 700px;
+  --spacing-fh: 249.00001525878906px;
+  --spacing-dw: 1600px;
+
+  /* <height> */
+  --spacing-videoh: 508px;
+  --spacing-imgh: 384px;
+  --spacing-mh: 507.38720703125px;
+  --spacing-ih: 451px;
+  --spacing-eh: 632px;
+  --spacing-slideh: 271px;
+  --spacing-feeh: 198px;
+  --spacing-footh: 249px;
+
+
+
+  /* <text-stroke> */
+
+  --text-stroke-width: 2px;
+  --text-stroke-color: #FFFFFF;
+
+  /* <border-radius> */
+
+  --radius-sr: 66px;
+  --radius-vr: 5px;
+  --radius-slbr: 12px;
+
+  /* </margin> */
+  --spacing-anchorml: 40%;
+  --spacing-ipara: 16px;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+.animate-slideDown {
+  animation: slideDown 0.4s ease forwards;
+}
+
+@keyframes infinite-scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-2350px);
+  }
+}
+
+.animate-infinite-scroll {
+  display: flex;
+  animation: infinite-scroll 20s linear infinite;
 }
